@@ -16,10 +16,6 @@
     @media (max-width: 480px) 
       gap: 30px
 
-
-  &__column
-
-
   &__name
     position: relative
     color: var(--light-color)
@@ -43,18 +39,11 @@
     transition: color 0.3s ease
     @media (any-hover: hover)
       &:hover
-        color: var(--hover-color)    
-
-
-  &__list
-
+        color: var(--hover-color) 
 
   &__item    
     &:not(&:last-child)
       margin-bottom: 28px
-
-    &--submenu
-
 
   &__link
     text-transform: uppercase
@@ -81,11 +70,9 @@
       opacity: 1
       visibility: visible
 
-
   &__subitem    
     &:not(&:last-child)
       margin-bottom: 10px
-
 
   &__sublink    
     font-size: 14px
@@ -93,8 +80,7 @@
     transition: color 0.3s ease 
     @media (any-hover: hover)
       &:hover
-        color: var(--hover-color)   
-
+        color: var(--hover-color)
 
   &__socials
     display: flex
