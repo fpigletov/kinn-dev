@@ -1,0 +1,224 @@
+*
+  padding: 0
+  margin: 0
+  border: 0
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+a:focus-visible,
+button:focus-visible
+  outline: 2px solid var(--accent-color)
+
+a
+  color: inherit
+  outline: none
+
+aside,
+nav,
+footer,
+header,
+section
+  display: block
+
+html,
+body
+  height: 100%
+  min-width: var(--min-width)  
+
+body
+  font-size: 16px
+  line-height: 1
+  font-family: var(--main-font-family)
+  background-color: var(--white-color)
+  color: var(--accent-color)  
+  font-weight: 400
+  font-style: normal
+
+input,
+button,
+textarea
+  font-size: inherit
+  font-family: var(--main-font-family)
+
+button
+  cursor: pointer
+  background-color: transparent
+
+a,
+a:visited
+  text-decoration: none  
+
+a:hover
+  text-decoration: none
+
+ul li
+  list-style: none
+
+img  
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-weight: inherit
+  font-size: inherit
+
+.wrapper
+  width: 100%
+  min-height: 100%
+  overflowy : hidden
+  display: flex
+  flex-direction: column  
+
+//Sections  
+.main
+  flex: 1 1 auto
+
+  &__hero
+    padding: 118px 0 91px 0
+    @media (max-width: 480px)
+      padding: 80px 0 40px 0
+
+  &__essentials,
+  &__table
+    padding: 24px 0
+    @media (max-width: 480px)
+      padding: 20px 0
+
+  &__sign-up
+    padding: 16px 0 40px 0
+    @media (max-width: 992px)
+      padding: 0 0 20px 0   
+      
+  &__moments
+    padding-bottom: 128px
+    @media (max-width: 992px)
+      padding-bottom: 80px
+    @media (max-width: 480px)
+      padding-bottom: 20px
+
+//Container  
+.container
+  max-width: var(--max-width-container)
+  padding: 0 20px
+  margin: 0 auto
+  @media (max-width: 480px)
+    padding: 0 10px
+
+//Hidden
+.hidden
+  overflow: hidden
+
+//Text
+.title-m
+  font-size: 28px
+  line-height: 130%  
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  @media (max-width: 480px)
+    font-size: 24px
+    line-height: 120%
+
+.title-l
+  position: relative
+  font-size: 29px
+  line-height: 130%
+  text-align: center
+  margin-bottom: 68px
+  @media (max-width: 992px)
+    margin-bottom: 40px
+    line-height: 120%
+  &::after
+    content: ''
+    position: absolute
+    bottom: -33px
+    left: 50%
+    width: 40px
+    height: 1px
+    background-color: var(--light-accent-color)
+    transform: translateX(-50%)
+  @media (max-width: 992px)
+    font-size: 24px
+    line-height: 120%
+    &::after    
+      bottom: -20px
+
+.descr
+  font-family: var(--secondary-font-family)
+  font-size: 20px
+  line-height: 162%
+  text-align: center
+  @media (max-width: 992px)
+    font-size: 16px
+    line-height: 130%
+
+
+//Btn
+.btn
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  color: var(--light-color)
+  background-color: var(--accent-color)  
+  transition: background-color 0.3s ease
+  @media (any-hover: hover)
+    &:hover
+      background-color: var(--hover-color)
+
+//Wrapper
+.content-wrapper
+  display: flex
+  align-items: flex-start 
+  gap: 34px
+  background-color: var(--light-color)
+  padding: 64px 32px
+  @media (max-width: 992px)
+    padding: 16px
+  @media (max-width: 768px)
+    flex-direction: column
+    gap: 20px
+  @media (max-width: 480px) 
+    padding: 10px
+
+.content
+  flex: 1 1 521px
+  height: 100%
+  padding: 64px 80px
+  @media (max-width: 1200px)      
+    padding: 20px      
+  @media (max-width: 768px) 
+    flex: 1 1 auto   
+  @media (max-width: 480px) 
+    padding: 10px
+
+.img
+  flex: 1 1 743px
+  @media (max-width: 768px) 
+    flex: 1 1 auto  
+
+.submenu-link  
+  display: flex
+  align-items: flex-start      
+  span
+    display: block
+    margin-right: 9px
+  svg
+    width: 10px
+    height: 8px
+    fill: var(--dark-color)
+    transition: transform 0.3s ease
+  &.active
+    color: var(--hover-color)
+    svg
+      transform: rotate(-180deg)
+  

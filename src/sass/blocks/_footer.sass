@@ -1,0 +1,127 @@
+.footer
+  background-color: var(--light-accent-color)
+  padding: 65px 0 114px 0
+  @media (max-width: 992px) 
+    padding: 60px 0 80px 0
+  @media (max-width: 480px) 
+    padding: 40px 0 
+
+  &__body
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr))
+    justify-content: center
+    gap: 100px
+    @media (max-width: 992px) 
+      gap: 60px
+    @media (max-width: 480px) 
+      gap: 30px
+
+
+  &__column
+
+
+  &__name
+    position: relative
+    color: var(--light-color)
+    letter-spacing: 0.11em
+    text-transform: uppercase
+    margin-bottom: 40px
+    &::after
+      position: absolute
+      content: ''
+      bottom: -20px
+      left: 0
+      width: 40px
+      height: 1px
+      background-color: var(--light-color)
+
+  &__descr
+    line-height: 130%
+    color: var(--light-color)
+
+  &__email
+    transition: color 0.3s ease
+    @media (any-hover: hover)
+      &:hover
+        color: var(--hover-color)    
+
+
+  &__list
+
+
+  &__item    
+    &:not(&:last-child)
+      margin-bottom: 28px
+
+    &--submenu
+
+
+  &__link
+    text-transform: uppercase
+    line-height: 100%
+    color: var(--light-color)
+    transition: color 0.3s ease 
+    @media (any-hover: hover)
+      &:hover
+        color: var(--hover-color)   
+
+
+    &--submenu
+      display: flex
+
+
+  &__sublist      
+    height: 0
+    opacity: 0
+    visibility: hidden
+    transition: height 0.5s ease
+    &.active
+      padding: 18px 10px 0 10px
+      height: auto
+      opacity: 1
+      visibility: visible
+
+
+  &__subitem    
+    &:not(&:last-child)
+      margin-bottom: 10px
+
+
+  &__sublink    
+    font-size: 14px
+    color: var(--light-color)
+    transition: color 0.3s ease 
+    @media (any-hover: hover)
+      &:hover
+        color: var(--hover-color)   
+
+
+  &__socials
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    gap: 19px
+    @media (max-width: 1200px) 
+      justify-content: flex-start
+
+  &__social
+    &:first-child
+      .footer__icon svg
+        width: 16px
+        height: 23px
+
+  &__icon
+    svg
+      width: 22px
+      height: 22px
+      fill: var(--dark-color)
+      transition: fill 0.3s ease
+    @media (any-hover: hover)
+      &:hover
+        svg
+          fill: var(--hover-color)
+
+
+
+
+
