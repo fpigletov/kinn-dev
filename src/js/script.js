@@ -12,25 +12,21 @@ window.addEventListener('DOMContentLoaded', () => {
   const headerSublists = document.querySelectorAll('.header__sublist');
   const footerSublists = document.querySelectorAll('.footer__sublist');
   const menuAnimation = gsap.timeline({ paused: true });
-  // const startAnimation = gsap.timeline();
+  const startAnimation = gsap.timeline();
   let isOpen = false;
 
   // //Start Animation
-  // startAnimation.from('.wrapper', {
-  //   opacity: 0,
-  //   duration: 1,
-  // }).from('.header', {
-  //   opacity: 0,
-  //   duration: 1,
-  // }).from('.hero__title', {
-  //   opacity: 0,
-  //   duration: 1,
-  // }, '-=0.5').from('.hero__column', {
-  //   opacity: 0,
-  //   duration: 1,
-  //   y: 150,
-  //   stagger: 0.3,
-  // }, '-=0.5');
+  startAnimation.from('.wrapper', {
+    opacity: 0,
+    duration: 1,
+  }).from('.header', {
+    opacity: 0,
+    duration: 1,
+  }).from('.hero__info', {
+    y: 200,
+    opacity: 0,
+    duration: 1,
+  }, '-=0.5')
 
   //Menu Animation
   gsap.matchMedia().add('(max-width: 1200px)', () => {
